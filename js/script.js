@@ -8,7 +8,8 @@ AllVariables.button_add_card.addEventListener("click", addTask);
 
 addTask();
 
-import { test } from "./task_structure";
+import { test } from "./task_structure.js";
+
 let test1 = test(mycontent);
 
 console.log(test1);
