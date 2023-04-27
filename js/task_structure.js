@@ -1,4 +1,5 @@
 //test.js
-export function test(target) {
-    return document.getElementById(target).value;
+export function lineThrough(target) {
+    // return document.getElementsByClassName(target).value;
+    target.style.textDecoration = "line-through";
 }

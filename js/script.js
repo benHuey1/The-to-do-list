@@ -4,15 +4,82 @@ console.log(AllVariables.article_card);
 
 // Create a section card by clicking on the Add button
 import { addTask } from "./add_task.js";
-AllVariables.button_add_card.addEventListener("click", addTask);
+import { lineThrough } from "./task_structure.js";
+// import { increment } from "./increment_id.js";
 
-addTask();
+// let arr = {
+//     idCard: "",
+//     nameTask: "",
+// };
+// Attribution d'un id par task
+let sectionCard = document.getElementsByClassName("sectionCard");
+AllVariables.button_add_card.addEventListener("click", function () {
+    addTask();
+    for (let i = 0; i < sectionCard.length; i++) {
+        // sectionCard[i].addEventListener("click", function () {
+        sectionCard[i].setAttribute("id", '"' + i + '"');
+        alert("yooo");
+        // });
+    }
+});
 
-import { test } from "./task_structure.js";
+// Remove the task if button pushed
+let sectionId = document.getElementById("id");
+let check = document.getElementsByClassName("check");
+let content = document.getElementsByClassName("content");
+let trashBin = document.getElementsByClassName("trashBin");
 
-let test1 = test(mycontent);
+// let elemIsclicked = false;
+function clickRemove() {
+    // if (sectionCard.addEventListener) {
+    //     sectionCard.addEventListener(
+    //         "click",
+    //         function () {
+    //             alert("it s the section");
+    //         },
+    //         false
+    //     );
+    //     // if (trashBin.addEventListener) {
+    //     //     alert("ok");
+    //     // } else {
+    //     //     alert("nope");
+    //     // }
+    // } else {
+    //     sectionCard.attachEvent("onclick"),
+    //         function () {
+    //             alert("it s the section too");
+    //         };
+    // }
+    alert("oh");
+    // elemIsclicked = true;
+}
+sectionId.addEventListener("click", clickRemove);
 
-console.log(test1);
+// addTask();
+
+// let check = document.getElementsByClassName("check");
+// let contents = document.getElementsByClassName("content");
+// let arrayCard1 = arrayCard;
+// console.log(lineThrough);
+
+// for (let content of contents) {
+//     content.addEventListener("click", lineThrough(content));
+
+//     // for each
+//     // content.id =
+// }
+
+// AllVariables.button_add_card.addEventListener("click", function () {
+//     console.log(arrayCard);
+// });
+
+// for (let i = 0; i < sectionCard.length; i++) {
+//     sectionCard[i].addEventListener("click", function () {
+//         sectionCard[i].setAttribute("id", '"' + i + '"');
+//         alert("yooo");
+//     });
+// }
+
 // test.addEventListener("click", function content1(test) {
 // import { addTask } from "./add_task.js";
 // addTask(myContent);
