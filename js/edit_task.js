@@ -13,14 +13,19 @@ export function edit_task(e) {
         let divCheckbox = section.firstChild;
         let checkbox = divCheckbox.firstChild;
 
-        console.log(checkbox);
+        // console.log(checkbox);
         // console.log(checkbox);
         if (checkbox.checked == true) {
             alert("coched");
         } else if (checkbox.checked == false) {
             // alert("uncoched");
             let inputContent = document.getElementsByName("inputUser");
-            console.log(inputContent);
+            let input = e.firstChild;
+            let span = e.children[1];
+            input.style.display = "block";
+            span.style.display = "none";
+            // e.textContent.remove();
+            console.log(e.child);
         }
     }
 }

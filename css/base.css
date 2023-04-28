@@ -98,9 +98,11 @@ main .sectionCard .content {
   text-align: left;
   line-height: 50px;
 }
-main .sectionCard .content input {
-  display: block;
-  width: 50px;
+main .sectionCard .content .inputUser {
+  display: none;
+  position: relative;
+  top: 12px;
+  width: 130px;
   height: 20px;
 }
 main .sectionCard .content:hover {

@@ -8,11 +8,13 @@ import { edit_task } from "./edit_task.js";
 
 let sectionCard = document.getElementsByClassName("sectionCard");
 let content = document.getElementsByClassName("content");
+let trashBin = document.getElementsByClassName("divTrashBin");
+let checkbox = document.getElementsByClassName("divCheckbox");
 
 /* Create a section card by clicking on the Add button */
 AllVariables.button_add_card.addEventListener("click", function () {
     createTask();
-    increment_id(sectionCard);
+    increment_id(sectionCard, checkbox, content, trashBin);
     // for (let i = 0; i < sectionCard.length; i++) {
     //     // sectionCard[i].addEventListener("click", function () {
     //     sectionCard[i].setAttribute("id", `${i}`);
@@ -22,12 +24,12 @@ AllVariables.button_add_card.addEventListener("click", function () {
     // }
 });
 
-let trashBin = document.getElementsByClassName("divTrashBin");
+// let trashBin = document.getElementsByClassName("divTrashBin");
 
 /* Remove a section card by clicking on the delete button */
 document.addEventListener("click", (event) => {
     removeTask(event.target);
-    increment_id(sectionCard);
+    increment_id(sectionCard, checkbox, content, trashBin);
 });
 
 /* Cross out the completed task */

@@ -1,9 +1,6 @@
 import * as AllVariables from "./variables_declaration.js";
 
 export function createTask() {
-    // function test() {
-    //     console.log("test");
-    // }
     const section = document.createElement("section");
     section.setAttribute("class", "sectionCard");
     // AllVariables.article_card.appendChild(section);
@@ -21,21 +18,20 @@ export function createTask() {
 
     let divContent = document.createElement("div");
     divContent.setAttribute("class", "content");
-    `<button class="button_trashBin">X</button>`;
     section.appendChild(divContent);
     // divContent.innerHTML = `<input class="inputUser" type="text" name="input" value="">`;
-    // divContent.insertAdjacentHTML(`<button class="button_trashBin">X</button>`);
-    // divContent.appendChild(inputContent);
+    let inputUser = document.createElement("input");
+    inputUser.setAttribute("class", "inputUser");
+    inputUser.placeholder = "Enter a task";
+    divContent.appendChild(inputUser);
+
+    let span = document.createElement("span");
+    span.setAttribute("class", "spanTextTask");
+    // span.style.cursor = "pointer";
+    span.textContent = "-Empty-";
+    divContent.appendChild(span);
 
     let divTrash = document.createElement("div");
-    // divTrash.setAttribute("onclick", "test()");
     divTrash.setAttribute("class", "divTrashBin");
-
-    // divTrash.innerHTML = `<button class="button_trashBin">X</button>`;
     section.appendChild(divTrash);
-    // divTrash.style.backgroundImage =
-    //     "url(" + AllVariables.arrayIcon.picture +    ")";
-
-    // console.log("heyyy");
-    divContent.textContent = "-Empty-";
 }

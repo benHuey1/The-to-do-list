@@ -109,10 +109,18 @@ main {
             text-align: left;
             line-height: 50px;
             // text-decoration: line-through;
-            input {
-                display: block;
-                width: 50px;
+            .inputUser {
+                display: none;
+                position: relative;
+                top: 12px;
+                width: 130px;
                 height: 20px;
+            }
+            // .spanTextTask {
+            //     position: absolute;
+            //     top: 10px;
+            // }
+            .spanTextTask {
             }
         }
         .content:hover {
@@ -123,6 +131,8 @@ main {
             background-position: center;
             background-size: cover;
             background-size: 30px;
+        }
+        .spanTextTask:hover {
         }
         .divTrashBin {
             // background-color: azure;
