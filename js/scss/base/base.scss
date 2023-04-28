@@ -1,0 +1,150 @@
+body {
+    // background-color: rgb(48, 48, 172);
+    background-image: url(https://cdn.pixabay.com/photo/2020/07/26/02/28/jellyfish-5438288_960_720.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(231, 231, 238, 0.5);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100px;
+    margin: 10px 10px;
+    gap: 20px;
+    border: 1px solid gray;
+    border-radius: 10px 10px;
+    color: white;
+    & h1 {
+        font-weight: 800;
+        font-size: 1.5em;
+    }
+    & nav {
+        // position: fixed;
+        // top: 10px;
+        // right: 10px;
+        width: 200px;
+        height: 30px;
+        // background-color: aqua;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+main {
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+    // background-color: white;
+    width: 100%;
+    padding: 0px 0px;
+    // .button_add_card_space {
+    //     width: 100%;
+    //     height: 50px;
+    //     margin-left: 10px;
+    // background-color: yellow;
+    .div_button_add_card {
+        height: 85px;
+    }
+    #button_add_card {
+        width: 60px;
+        height: 60px;
+        margin: 10px 0px 10px 20px;
+        text-align: center;
+        border-radius: 30px;
+        border-color: rgb(160, 160, 160);
+    }
+    // }
+    #button_add_card:hover {
+        width: 70px;
+        height: 70px;
+        margin: 5px 0px 5px 15px;
+        border-radius: 35px;
+        transform: scale(105%);
+        // text-transform: uppercase;
+    }
+    #article_pinned_card {
+        // background-color: greenyellow;
+        display: none;
+        width: 100%;
+        height: 100px;
+    }
+    #article_card {
+        // background-color: aqua;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        gap: 5px;
+        margin: 0px 10px;
+    }
+    .sectionCard {
+        background-color: rgba(255, 255, 255, 0.5);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 90%;
+        height: 50px;
+        margin: 0px 10px;
+        border: 0.5px solid black;
+        border-radius: 15px;
+        .divCheckbox {
+            line-height: 50px;
+        }
+        .content {
+            width: 90%;
+            height: 100%;
+            // border: 2px solid black;
+            padding-left: 10px;
+            text-align: left;
+            line-height: 50px;
+            // text-decoration: line-through;
+            input {
+                display: block;
+                width: 50px;
+                height: 20px;
+            }
+        }
+        .content:hover {
+            // background-image: url(https://cdn.onlinewebfonts.com/svg/img_324322.png);
+            // background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_247408.png&f=1&nofb=1&ipt=48df87fa36b0aab84c5b6ee3d378161553409261212db3c0b799d7dcf0517c3d&ipo=images);
+            background-image: url(https://icons.veryicon.com/png/256/internet--web/web-icon/modification-general.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-size: 30px;
+        }
+        .divTrashBin {
+            // background-color: azure;
+            width: 10%;
+            height: 100%;
+            background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fclipground.com%2Fimages%2Fcross-symbol-png-1.png&f=1&nofb=1&ipt=72d95a7a5b10a0daa55ae80ca6c31de76186d829d21ef844aa320301722a55c2&ipo=images);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-size: 20px;
+            // border: 2px solid black;
+            border-radius: 200px 100px 100px 200px;
+            text-align: center;
+            line-height: 50px;
+        }
+        .divTrashBin:hover {
+            // background-color: blur(10px);
+            background-color: rgba(220, 220, 220, 0.5);
+            filter: opacity(0.3);
+        }
+    }
+    section:hover {
+        transform: scale(1.05);
+    }
+}
