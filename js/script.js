@@ -1,106 +1,46 @@
 import * as AllVariables from "./variables_declaration.js";
+import { removeTask } from "./remove_task.js";
+import { createTask } from "./create_task.js";
+// import { lineThrough } from "./task_structure.js";
+import { increment_id } from "./increment_id.js";
+import { cross_out_completed_task } from "./completed_task.js";
+import { edit_task } from "./edit_task.js";
 
-console.log(AllVariables.article_card);
-
-// Create a section card by clicking on the Add button
-import { addTask } from "./add_task.js";
-import { lineThrough } from "./task_structure.js";
-// import { increment } from "./increment_id.js";
-
-// let arr = {
-//     idCard: "",
-//     nameTask: "",
-// };
-// Attribution d'un id par task
 let sectionCard = document.getElementsByClassName("sectionCard");
+let content = document.getElementsByClassName("content");
+
+/* Create a section card by clicking on the Add button */
 AllVariables.button_add_card.addEventListener("click", function () {
-    addTask();
-    for (let i = 0; i < sectionCard.length; i++) {
-        // sectionCard[i].addEventListener("click", function () {
-        sectionCard[i].setAttribute("id", '"' + i + '"');
-        alert("yooo");
-        // });
-    }
+    createTask();
+    increment_id(sectionCard);
+    // for (let i = 0; i < sectionCard.length; i++) {
+    //     // sectionCard[i].addEventListener("click", function () {
+    //     sectionCard[i].setAttribute("id", `${i}`);
+
+    //     alert("yooo");
+    //     // });
+    // }
 });
 
-// Remove the task if button pushed
-let sectionId = document.getElementById("id");
-let check = document.getElementsByClassName("check");
-let content = document.getElementsByClassName("content");
-let trashBin = document.getElementsByClassName("trashBin");
+let trashBin = document.getElementsByClassName("divTrashBin");
 
-// let elemIsclicked = false;
-function clickRemove() {
-    // if (sectionCard.addEventListener) {
-    //     sectionCard.addEventListener(
-    //         "click",
-    //         function () {
-    //             alert("it s the section");
-    //         },
-    //         false
-    //     );
-    //     // if (trashBin.addEventListener) {
-    //     //     alert("ok");
-    //     // } else {
-    //     //     alert("nope");
-    //     // }
-    // } else {
-    //     sectionCard.attachEvent("onclick"),
-    //         function () {
-    //             alert("it s the section too");
-    //         };
-    // }
-    alert("oh");
-    // elemIsclicked = true;
-}
-sectionId.addEventListener("click", clickRemove);
+/* Remove a section card by clicking on the delete button */
+document.addEventListener("click", (event) => {
+    removeTask(event.target);
+    increment_id(sectionCard);
+});
 
-// addTask();
+/* Cross out the completed task */
+document.addEventListener("click", (event) => {
+    cross_out_completed_task(event.target);
+    // increment_id(sectionCard);
+});
+/* Edit the task */
+document.addEventListener("click", (event) => {
+    edit_task(event.target);
+});
 
-// let check = document.getElementsByClassName("check");
-// let contents = document.getElementsByClassName("content");
-// let arrayCard1 = arrayCard;
-// console.log(lineThrough);
-
-// for (let content of contents) {
-//     content.addEventListener("click", lineThrough(content));
-
-//     // for each
-//     // content.id =
-// }
-
-// AllVariables.button_add_card.addEventListener("click", function () {
-//     console.log(arrayCard);
-// });
-
-// for (let i = 0; i < sectionCard.length; i++) {
-//     sectionCard[i].addEventListener("click", function () {
-//         sectionCard[i].setAttribute("id", '"' + i + '"');
-//         alert("yooo");
-//     });
-// }
-
-// test.addEventListener("click", function content1(test) {
-// import { addTask } from "./add_task.js";
-// addTask(myContent);
-// test.style.color = "blue";
-// });
-// Delete a section by clicking on the trashBin
-// function removeCard() {
-//     // console.log("helloooo");
-//     addEvent.call(section);
-// }
-
-// import { removeCard } from "./removeCard_event.js";
-// removeCard(addTask.call(section));
-
-// AllVariables.article.addEventListener("click", removeCard);
-
-// function card() {
-//     AllVariables.array.forEach[i];
-// }
-
-// Enregistrer le panier dans le stockage local
+/* Enregistrer le panier dans le stockage local */
 // let card = JSON.parse(localStorage.getItem("card")) || []; // Pour conserver les card lorsque l'on rafraichit la page
 // function keepCard() {
 //     localStorage.setItem("card", JSON.stringify(card));

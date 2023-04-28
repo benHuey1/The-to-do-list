@@ -12,6 +12,7 @@ export {
 let array = [];
 const main = document.querySelector("main");
 const button_add_card = document.getElementById("button_add_card");
+const div_button_add_card = document.getElementById("div_button_add_card");
 const div = document.querySelector("div");
 const article = document.querySelector("article");
 const article_pinned_card = document.getElementById("article_pinned_card");

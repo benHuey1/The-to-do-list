@@ -3,6 +3,9 @@ body {
     background-image: url(https://cdn.pixabay.com/photo/2020/07/26/02/28/jellyfish-5438288_960_720.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 100%;
+    width: 100%;
+    margin: 0px;
 }
 header {
     display: flex;
@@ -47,17 +50,25 @@ main {
     //     height: 50px;
     //     margin-left: 10px;
     // background-color: yellow;
+    .div_button_add_card {
+        height: 85px;
+    }
     #button_add_card {
-        width: 50px;
-        height: 50px;
-        margin-left: 10px;
+        width: 60px;
+        height: 60px;
+        margin: 10px 0px 10px 20px;
         text-align: center;
-        border-radius: 25px;
+        border-radius: 30px;
         border-color: rgb(160, 160, 160);
     }
     // }
     #button_add_card:hover {
+        width: 70px;
+        height: 70px;
+        margin: 5px 0px 5px 15px;
+        border-radius: 35px;
         transform: scale(105%);
+        // text-transform: uppercase;
     }
     #article_pinned_card {
         // background-color: greenyellow;
@@ -75,18 +86,19 @@ main {
         width: 100%;
         height: 100%;
         gap: 5px;
-        margin: 10px 10px;
+        margin: 0px 10px;
     }
-    section {
+    .sectionCard {
         background-color: rgba(255, 255, 255, 0.5);
         display: flex;
         flex-direction: row;
         justify-content: center;
-        width: 100%;
+        width: 90%;
         height: 50px;
+        margin: 0px 10px;
         border: 0.5px solid black;
         border-radius: 15px;
-        .divInput {
+        .divCheckbox {
             line-height: 50px;
         }
         .content {
@@ -97,8 +109,22 @@ main {
             text-align: left;
             line-height: 50px;
             // text-decoration: line-through;
+            input {
+                display: block;
+                width: 50px;
+                height: 20px;
+            }
         }
-        .trashBin {
+        .content:hover {
+            // background-image: url(https://cdn.onlinewebfonts.com/svg/img_324322.png);
+            // background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_247408.png&f=1&nofb=1&ipt=48df87fa36b0aab84c5b6ee3d378161553409261212db3c0b799d7dcf0517c3d&ipo=images);
+            background-image: url(https://icons.veryicon.com/png/256/internet--web/web-icon/modification-general.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-size: 30px;
+        }
+        .divTrashBin {
             // background-color: azure;
             width: 10%;
             height: 100%;
@@ -106,16 +132,19 @@ main {
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
-            background-size: 40%;
+            background-size: 20px;
             // border: 2px solid black;
             border-radius: 200px 100px 100px 200px;
             text-align: center;
             line-height: 50px;
         }
-        .trashBin:hover {
+        .divTrashBin:hover {
             // background-color: blur(10px);
             background-color: rgba(220, 220, 220, 0.5);
             filter: opacity(0.3);
         }
+    }
+    section:hover {
+        transform: scale(1.05);
     }
 }
