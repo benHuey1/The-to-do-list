@@ -24,8 +24,14 @@ export function edit_task(e) {
             let span = e.children[1];
             input.style.display = "block";
             span.style.display = "none";
-            // e.textContent.remove();
-            console.log(e.child);
+            let inputValue = input.value;
+            span.textContent = input.value;
+            input.addEventListener("keyup", (el) => {
+                if (el.key == "Enter") {
+                    input.style.display = "none";
+                    span.style.display = "block";
+                }
+            });
         }
     }
 }
