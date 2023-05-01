@@ -38,8 +38,6 @@ header nav {
 main {
   display: flex;
   flex-direction: column;
-  flex-flow: row wrap;
-  width: 100%;
   padding: 0px 0px;
 }
 main .div_button_add_card {
@@ -71,7 +69,6 @@ main #article_card {
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
-  width: 100%;
   height: 100%;
   gap: 5px;
   margin: 0px 10px;
@@ -81,9 +78,8 @@ main .sectionCard {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 90%;
+  width: 100%;
   height: 50px;
-  margin: 0px 10px;
   border: 0.5px solid black;
   border-radius: 15px;
 }
@@ -128,9 +124,9 @@ main .sectionCard .divTrashBin:hover {
   filter: opacity(0.3);
 }
 main section:hover {
-  transform: scale(1.02);
-  -o-transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  -moz-transform: scale(1.02);
-  -webkit-transform: scale(1.02);
+  transform: scale(1.01);
+  -o-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  -moz-transform: scale(1.01);
+  -webkit-transform: scale(1.01);
 }/*# sourceMappingURL=base.css.map */

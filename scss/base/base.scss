@@ -41,9 +41,8 @@ header {
 main {
     display: flex;
     flex-direction: column;
-    flex-flow: row wrap;
     // background-color: white;
-    width: 100%;
+    // width: 100%;
     padding: 0px 0px;
     // .button_add_card_space {
     //     width: 100%;
@@ -83,21 +82,29 @@ main {
         flex-wrap: wrap;
         align-items: flex-start;
         justify-content: center;
-        width: 100%;
+        // width: 100%;
         height: 100%;
         gap: 5px;
         margin: 0px 10px;
+        @include responsive-desktop {
+            flex-flow: row wrap;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
     }
     .sectionCard {
         background-color: rgba(255, 255, 255, 0.5);
         display: flex;
         flex-direction: row;
         justify-content: center;
-        width: 90%;
+        width: 100%;
         height: 50px;
-        margin: 0px 10px;
+        // margin: 0px 10px;
         border: 0.5px solid black;
         border-radius: 15px;
+        @include responsive-desktop {
+            width: 325px;
+        }
         .divCheckbox {
             line-height: 50px;
         }
@@ -154,11 +161,16 @@ main {
             filter: opacity(0.3);
         }
     }
+    // .sectionCard > * {
+    //     @include responsive-desktop {
+    //         width: 325px;
+    //     }
+    // }
     section:hover {
-        transform: scale(1.02);
-        -o-transform: scale(1.02);
-        -ms-transform: scale(1.02);
-        -moz-transform: scale(1.02);
-        -webkit-transform: scale(1.02);
+        transform: scale(1.01);
+        -o-transform: scale(1.01);
+        -ms-transform: scale(1.01);
+        -moz-transform: scale(1.01);
+        -webkit-transform: scale(1.01);
     }
 }
